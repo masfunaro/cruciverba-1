@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Cruciverba 1</title>
+    <script src="../crosswordCompilerApp/crosswordCompiler.js"></script>
+    <script src="Cruciverba_1.js"></script>
+</head>
+<body>
+    <div id="CrosswordCompilerPuz"></div>
+    <hr>
+    <p><a href="Cruciverba_1.pdf">📄 Versione PDF</a></p>
+    <p><a href="Cruciverba_1_sol.png">🌟 Soluzione</a></p>
+    <p><a href="../index.html">🔙 Torna alla Home</a></p>
+    <script>
+        $(function () {
+            if (typeof CrosswordCompiler !== "undefined" && typeof CrosswordPuzzleData !== "undefined") {
+                $("#CrosswordCompilerPuz").CrosswordCompiler(CrosswordPuzzleData, null, {
+                    SUBMITMETHOD: "POST",
+                    SUBMIT: "",
+                    PROGRESS: ""
+                });
+            }
+        });
+    </script>
+</body>
+</html>
