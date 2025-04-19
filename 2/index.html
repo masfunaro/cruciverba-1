@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cruciverba n.2</title>
+  <style>
+    body, .Clues, .GridClues {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 12pt;
+    }
+    .PuzTitle {
+      font-size: 15pt;
+      color: #800000;
+      font-weight: bold;
+    }
+    .CopyTag {
+      font-size: 10pt;
+      color: #000000;
+    }
+    .SubmitButton, input[value="Invia"] {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+  <script src="../CrosswordCompilerApp/crosswordCompiler.js"></script>
+  <script src="Cruciverba_2.js"></script>
+
+  <script>
+    $(function() {
+      if (typeof CrosswordCompiler !== "undefined" && typeof CrosswordPuzzleData !== "undefined") {
+        $("#CrosswordCompilerPuz").CrosswordCompiler(CrosswordPuzzleData, null, {
+          SUBMITMETHOD: "POST",
+          SUBMIT: "",
+          PROGRESS: ""
+        });
+      }
+    });
+  </script>
+
+  <div id="CrosswordCompilerPuz"></div>
+
+  <hr>
+  <p><a href="Cruciverba_2.pdf">📄 Versione PDF</a></p>
+  <p><a href="Cruciverba_2_sol.png">🧩 Soluzione</a></p>
+  <p><a href="../index.html">⬅️ Torna alla Home</a></p>
+
+</body>
+</html>
