@@ -3,11 +3,11 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Cruciverba</title>
-  <style type="text/css">
+  <title>Cruciverba n.2</title>
+  <style>
     body, .Clues, .GridClues {
+      font-family: "Times New Roman", Times, serif;
       font-size: 12pt;
-      font-family: Times New Roman, Times;
     }
     .PuzTitle {
       font-size: 15pt;
@@ -18,36 +18,36 @@
       font-size: 10pt;
       color: #000000;
     }
+    .SubmitButton, input[value="Invia"] {
+      display: none !important;
+    }
   </style>
 </head>
-<body text="#000000" bgcolor="#ffffff">
-  <!-- Librerie da CDN -->
+<body>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
-
-  <!-- Script del cruciverba -->
-  <script src="CrosswordCompilerApp/crosswordCompiler.js"></script>
-  <script src="Cruciverba_1.js"></script>
+  <script src="../CrosswordCompilerApp/crosswordCompiler.js"></script>
+  <script src="Cruciverba_2.js"></script>
 
   <script>
     $(function() {
-      $("#CrosswordCompilerPuz").CrosswordCompiler(CrosswordPuzzleData, null, {
-        SUBMITMETHOD: "POST",
-        SUBMIT: "",
-        PROGRESS: ""
-      });
+      if (typeof CrosswordCompiler !== "undefined" && typeof CrosswordPuzzleData !== "undefined") {
+        $("#CrosswordCompilerPuz").CrosswordCompiler(CrosswordPuzzleData, null, {
+          SUBMITMETHOD: "POST",
+          SUBMIT: "",
+          PROGRESS: ""
+        });
+      }
     });
   </script>
 
-  <!-- Cruciverba interattivo -->
   <div id="CrosswordCompilerPuz"></div>
 
   <hr>
-  <p><a class="PDFURL" href="Cruciverba_1.pdf">Versione PDF</a></p>
-  <p><a class="SolURL" href="Cruciverba_1_sol.png">Soluzione</a></p>
-  <hr>
-  <span class="CopyTag">
-    Pagina Web creata con <a href="https://www.crossword-compiler.com/">Crossword Compiler</a>.
-  </span>
+  <p><a href="Cruciverba_2.pdf">📄 Versione PDF</a></p>
+  <p><a href="Cruciverba_2_sol.png">🧩 Soluzione</a></p>
+  <p><a href="../index.html">⬅️ Torna alla Home</a></p>
+
 </body>
 </html>
